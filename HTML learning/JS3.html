@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Operations Demo</title>
+  </head>
+  <body>
+    <h1>Operations Demo</h1>
+
+    <h2>Logical Operations:</h2>
+    <div id="logicalOperations"></div>
+
+    <h2>Comparison Operations:</h2>
+    <div id="comparisonOperations"></div>
+
+    <h2>Conditional Operations:</h2>
+    <div id="conditionalOperations"></div>
+
+    <script>
+      // Logical Operations
+      var logicalOperationsDiv = document.getElementById("logicalOperations");
+      logicalOperationsDiv.innerHTML =
+        "Logical NOT (true): " +
+        !true +
+        "<br>" +
+        "Logical AND (true && false): " +
+        (true && false) +
+        "<br>" +
+        "Logical OR (true || false): " +
+        (true || false) +
+        "<br>" +
+        "Logical XOR (true ^ false): " +
+        (true ^ false);
+
+      // Comparison Operations
+      var comparisonOperationsDiv = document.getElementById(
+        "comparisonOperations"
+      );
+      var a = 5;
+      var b = 10;
+      comparisonOperationsDiv.innerHTML =
+        "Equal to (a == b): " +
+        (a == b) +
+        "<br>" +
+        "Not Equal to (a != b): " +
+        (a != b) +
+        "<br>" +
+        "Greater than (a > b): " +
+        (a > b) +
+        "<br>" +
+        "Less than (a < b): " +
+        (a < b) +
+        "<br>" +
+        "Greater than or equal to (a >= b): " +
+        (a >= b) +
+        "<br>" +
+        "Less than or equal to (a <= b): " +
+        (a <= b);
+
+      // Conditional Operations
+      var conditionalOperationsDiv = document.getElementById(
+        "conditionalOperations"
+      );
+      var age = prompt("Enter age");
+      var canVote = age >= 18 ? "Yes" : "No";
+      conditionalOperationsDiv.innerHTML = "Can vote? " + canVote;
+    </script>
+  </body>
+</html>

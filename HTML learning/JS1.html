@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arithmetic Operations</title>
+  </head>
+  <body>
+    <h1>Arithmetic Operations</h1>
+
+    <label for="num1">Number 1:</label>
+    <input type="text" id="num1" />
+    <br>
+    <br>
+
+    <label for="num2">Number 2:</label>
+    <input type="text" id="num2" />
+    <br>
+    <br>
+
+    <button onclick="performOperations()">ApplyOperations</button>
+
+    <h2>Results:</h2>
+    <div id="results"></div>
+
+    <script>
+      function performOperations() {
+        var num1 = parseInt(document.getElementById("num1").value);
+        var num2 = parseInt(document.getElementById("num2").value);
+
+        var addition = num1 + num2;
+        var subtraction = num1 - num2;
+        var multiplication=num1*num2;
+        var division = num1 / num2;
+        var modulo = num1 % num2;
+        var doubleMultiplication = 2 * (num1 * num2);
+
+        var resultsDiv = document.getElementById("results");
+        resultsDiv.innerHTML =
+          "Addition (Number 1 + Number 2) ==> " +
+          addition +
+          "<br>" +
+          "Subtraction (Number 1 - Number 2) ==> " +
+          subtraction +
+          "<br>" +
+          "multiplication (Number 1 * Number 2) ==> " +
+          multiplication +
+          "<br>" +
+          "Division (Number 1 / Number 2) ==> " +
+          division +
+          "<br>" +
+          "Modulo (Number 1 % Number 2) ==> " +
+          modulo +
+          "<br>" +
+          "Double Multiplication (Number 1 ** Number 2) ==> " +
+          doubleMultiplication;
+      }
+    </script>
+  </body>
+</html>

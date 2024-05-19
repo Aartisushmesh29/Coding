@@ -1,0 +1,48 @@
+*{
+    text-decoration: none;
+}
+.navbar {
+    background-color: crimson;
+    
+    padding-right:15px ;
+    padding-left: 15px;
+}
+.navdiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.logo{
+    font-size: 20px;
+    font-size: bold;
+}
+
+.logo a{
+    font-size: 35px;
+    font-weight:600px ;
+    color: white;
+
+}
+li{
+    list-style: none;
+    display: inline-block;
+}
+li a{
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    
+    margin-right: 25px;
+}
+button{
+    background-color: black;
+    border-radius: 20px;
+    margin-left: 25px; 
+    padding: 10px;
+}
+button a{
+    font-weight: bold ;
+    font-size: 15px;
+    color: white;
+}

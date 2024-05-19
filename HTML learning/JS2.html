@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Person Details</title>
+  </head>
+  <body>
+    <h1>Person Details</h1>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" />
+    <br>
+    <br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" />
+    <br>
+<br>
+    <label for="height">Height (in cm):</label>
+    <input type="number" id="height" />
+<br>
+<br>
+    <label for="weight">Weight (in kg):</label>
+    <input type="number" id="weight" />
+<br>
+<br>
+    <button onclick="displayDetails()">Display Details</button>
+
+    <h2>Person's Details:</h2>
+    <div id="personDetails"></div>
+
+    <script>
+      function displayDetails() {
+        var name = document.getElementById("name").value;
+        var age = parseInt(document.getElementById("age").value);
+        var height = parseInt(document.getElementById("height").value);
+        var weight = parseInt(document.getElementById("weight").value);
+
+        var detailsDiv = document.getElementById("personDetails");
+        detailsDiv.innerHTML =
+          "Name: " +
+          name +
+          "<br>" +
+          "Age: " +
+          age +
+          "<br>" +
+          "Height: " +
+          height +
+          " cm" +
+          "<br>" +
+          "Weight: " +
+          weight +
+          " kg";
+      }
+    </script>
+  </body>
+</html>

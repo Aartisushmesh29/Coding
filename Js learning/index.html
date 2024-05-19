@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+       }
+      .container{
+        border: 2px solid green;
+        margin: 3px 0;
+        background-color: cyan;
+        padding: 5px;
+
+      }
+      .bg-primary{
+        background-color: blueviolet;
+
+      }
+      .text-success{
+        color: rgb(222, 229, 222);
+
+      }
+    </style>
+</head>
+<body>
+      <h1>Welcome to java script</h1>
+      <div  id ="firstcontainer" class="container">
+        <button id = "click" onclick = "clicked()" >Click Me</button>
+        <p>This is a paragraph which is the best para of this section.</p>
+      </div>
+      <div class="container">
+        <p>this is a paragraph</p>
+      </div>
+
+      <script>
+        // 1. Ways to print in js
+        // console.log("hello world");
+        // alert("m e");
+        // document.write("this is a document write");
+        // 2. javascript console API
+        //    console.log("hello world" , 4+6 , "another log");
+          // console.warn("this is a warning");
+          // console.error("this is a error");
+
+        //   3. Javascript variables
+        // container to store datd values 
+        // var num1 = 34;
+        // var num2 = 56;
+        // console.log(num1 + num2);
+
+        // 4. datatypes in javascript
+        
+        // Numbers
+        // var num1 = 4545;
+        // var num2 = 56.76;
+
+        // String 
+        // var str1  = "This is a string";
+
+
+        //  Objects 
+        // var marks = {
+
+        //     Ravi: 34,
+        //     AArti: 90,
+        //     Harry: 99.97
+     
+        // }
+        // console.log(num1);
+        // console.log(marks);
+
+        // Booleans 
+        // var a = true;
+        // var b = false;
+        //  console.log(a,b);
+
+
+    // Undefined 
+    // var undefined;
+    // console.log(und);
+
+
+    // Null
+
+    // Functions in js:
+
+    // function avg(a,b){
+    //   return (a+b)/2;
+    // }
+    // c1 = avg(4,6);
+    // c2 = avg(14,16);
+    // console.log(c1,c2);
+    
+
+    // var arr = [1,2,3,4,5,6,7];
+    // console.log(arr);
+    // for( var i = 0; i<= arr.length; i++){
+    //   console.log(arr[i])
+    // }
+
+    // arr.forEach(function(element){
+    //   console.log(element)
+    // })
+
+    // for(var i = 0;i<arr.length; i++){
+    //   if(i == 2){
+        // continue statement skips an iteration for that particular given condition.
+        // continue;     
+        // break statement exits the loop . loop will not execute after that condition.
+        // break;
+      // }
+      // console.log(arr[i])
+    // }
+
+
+    // Array Methods
+
+    // let myarr = ["fan", "camera",34, null , true];
+    // //  console.log(myarr.length);
+    // //  console.log(myarr.pop());
+    //  console.log(myarr.push("harry"));
+    //  console.log(myarr.shift());
+    //  console.log(myarr.unshift("harry"));
+    //  console.log(newLen);
+    //  console.log(myarr);
+    //  console.log(myarr.toString);
+    //  console.log(myarr);
+    //  myarr.sort();
+     
+   
+    // Strings Methods in javascript
+    // let mystring = "harry is sa good boy";
+    // console.log(mystring)
+    // // console.log(mystring.indexOf("good"))
+    // // console.log(mystring.lastIndexOf("good"))
+    // console.log(mystring.slice(1,4))
+    // console.log(mystring)
+    // console.log(mystring.replace("harry","rohan"));
+
+    // let mydate = new Date();
+    // console.log(mydate.getTime());
+    // console.log(mydate.getFullYear());
+    // console.log(mydate.getDay());
+    // console.log(mydate.getMinutes());
+    // console.log(mydate.getHours());
+
+    // DOM Manipulation in js 
+
+    // let elem = document.getElementById('click');
+    // // console.log('elem');
+
+    // let elemClass = document.getElementsByClassName("container")
+    // // console.log( elemClass);
+    // // elemClass[0].style.background = "yellow";
+    // elemClass[0].classList.add("bg-primary");
+    // elemClass[0].classList.add("text-sucess");
+
+    // // console.log(elem.innerHTML);
+    // // console.log(elem.innerText);
+
+    // tn = document.getElementsByTagName('text');
+    // // console.log(tn);
+
+    // createdElement = document.createElement('p');
+    // createdElement.innerText = "This is a creatde para";
+    // tn[0].appendchild(createdElement);
+    // createdElement2 = document.createdElement('b');
+    // createdElement2.innerText = "This is a created bold";
+    // tn[0].replacechild(createdElement2, createdElement);
+    // // removeChild(element); --> removes an element
+
+    // // selecting using query selector
+    // sel = document.querySelector('container')
+    // console.log(sel)
+    // sel  = document.querySelectorAll('.container')
+    // console.log(sel)
+
+    //  ****JS events****** 
+
+    // function clicked(){
+    //   console.log('the button was clicked');
+
+    // }
+    // window.onload = function(){
+    //   console.log('the document was loaded');
+    // }
+
+    // // events in js
+
+    // firstcontainer.addEventListener('click', function(){
+    //   console.log("click hua")
+    // })
+    // firstcontainer.addEventListener('mouseover', function(){
+    //   console.log("Mouse on container")
+    // })
+    // firstcontainer.addEventListener('mouseout', function(){
+    //   console.log("mouse out of coontainer")
+    // })
+    // firstcontainer.addEventListener('mouseup', function(){
+    //   console.log("Mouse up when clicked on container")
+    // })
+    // firstcontainer.addEventListener('mouseout', function(){
+    //   console.log("mouse down when clicked on container")
+    // })
+    // firstcontainer.addEventListener('click' , function(){
+    //   document.querySelectorAll('.container')[1].innerHTML= "<b> we have clicked</b>";
+    //   console.log("clicked on container");
+    // })
+
+    // let preHTML = document.querySelectorAll('.container')[1].innerHTML;
+    // firstcontainer.addEventListener('mouseup' , function(){
+    //   document.querySelectorAll('.container')[1].innerHTML= preHTML;
+    //   console.log("MOuse up when clicked on container");
+    // })
+    // firstcontainer.addEventListener('mousedown' , function(){
+    //   document.querySelectorAll('.container')[1].innerHTML= "<b> we have clicked</b>";
+
+    //   console.log("MOuse down when clicked on container");
+    // })
+
+    // ****Arrow function****
+    // function summ(a,b){
+    //   return a+b;
+
+    // // }
+    // summ = (a,b)=>{
+    //   return a+b;
+    // }
+
+    // ****setTimeout and setinterval
+
+    // logkaro = ()=>{
+    //   document.querySelectorAll('.container')[1].innerHTML = "<b> settime fired</b>";
+    //     console.log("Im your log");
+    // }
+    // setTimeout(logkaro ,2000);
+    // setInterval(logkaro,2000);
+    // clr = setInterval(logkaro,2000);
+    // Use clearInterval(clr)/clearTimeout(clr) to cancle setInterval/setTimeout.
+    
+    // ***Javascript localStorage 
+    // localStorage.setItem('name' , 'harry')
+    // localStorage.getItem('name')
+
+    // Json
+    // obj = {name:"harry" , length: 1}
+    //  jso= JSON.stringify(obj);
+    //  console.log(typeof jso)
+    //  console.log(jso) 
+
+
+    //  ****Template literals - backticks
+    // a=34;
+    // console.log(`this is my ${a}`)
+
+    
+
+      </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <title>Anti Ragging Form</title>
+</head>
+<body>
+    <style>
+       h1 {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+        form {
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #888;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+        input[type="cancel"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;}
+        input[type="cancel"]:hover {
+            background-color: #555;
+        }
+    </style>
+    <h1>Anti Ragging Form</h1>
+    <form id="studentForm" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <span id="nameError" class="error"></span><br>
+
+        <label for="rollno">Roll No:</label>
+        <input type="text" id="rollno" name="rollno" required>
+        <span id="rollnoError" class="error"></span><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        <span id="dobError" class="error"></span><br>
+
+        <label for="branch">Branch:</label>
+        <input type="text" id="branch" name="branch" required>
+        <span id="branchError" class="error"></span><br>
+
+        <label for="course">Course Name:</label>
+        <input type="text" id="course" name="course" required>
+        <span id="courseError" class="error"></span><br>
+
+        <label for="college">College Name:</label>
+        <input type="text" id="college" name="college" required>
+        <span id="collegeError" class="error"></span><br>
+
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="email" required>
+        <span id="emailError" class="error"></span><br>
+        <label for="Contact no.">Contact number</label>
+        <input type="number" id="phone-no." name="phone-no" required>
+        <span></span><br>
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <span id="genderError" class="error"></span><br>
+
+        <label for="parentName">Parent Name:</label>
+        <input type="text" id="parentName" name="parentName" required>
+        <span id="parentNameError" class="error"></span><br>
+
+        <label for="parentAddress">Parent Address:</label>
+        <textarea id="parentAddress" name="parentAddress" required></textarea>
+        <span id="parentAddressError" class="error"></span><br>
+
+        <label for="guardianName">Guardain Name:</label>
+        <input type="text" id="guardianName" name="guardianName" required>
+        <span id="guardianNameError" class="error"></span><br>
+
+        <label for="guardianAddress">Guardain Address:</label>
+        <textarea id="guardianAddress" name="guardianAddress" required></textarea>
+        <span id="guardianAddressError" class="error"></span><br>
+
+
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" required>
+        <span id="stateError" class="error"></span><br>
+
+        <input type="submit" value="Submit">
+        <input type="cancel" value="Cancel">
+    </form>
+
+    <script>
+        function validateForm() {
+            let valid = true;
+            const form = document.getElementById("studentForm");
+
+            const errorElements = form.getElementsByClassName("error");
+            for (const errorElement of errorElements) {
+                errorElement.textContent = "";
+            }
+
+            const name = document.getElementById("name").value;
+            if (name.trim() === "") {
+                document.getElementById("nameError").textContent = "Name is required";
+                valid = false;
+            }
+
+
+            return valid;
+        }
+    </script>
+</body>
+</html>

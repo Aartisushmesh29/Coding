@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+    
+}
+body{
+    /* vw -> vw will make the width of an object relative to the screen size (add Responsive-ness) */
+    width: 100vw;
+    /* vw -> vh will make the height of an object relative to the screen size (add Responsive-ness) */
+    height: 130vh;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   font-family: sans-serif;
+   background-color:  #54346c;
+   
+}
+/* .custom_select{
+    position: relative;
+    display: inline-block;
+    color: #403d84;
+} */
+/* .custom_select */
+ select{
+    min-height: 35px;
+    border-radius:20px;
+    border: 2px ;
+    cursor :pointer; 
+    appearance: none;
+    background-image: url(./dropdown.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    padding: 10px 200px 10px 200px;
+    /* calc  */
+    background-position-x: calc(100% - 20px) ;
+    background-position-y: 12px ;
+    background-color: rgb(120, 112, 181);
+}
+
+
+   
+
+
+
