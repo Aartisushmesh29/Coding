@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#rect{
+    width: 400px;
+    height: 200px;
+    border: 1px solid rgb(4, 4, 4);
+    background-color: rgb(133, 84, 84);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}

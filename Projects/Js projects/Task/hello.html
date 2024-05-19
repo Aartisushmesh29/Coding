@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Main{
+         display: flex;
+         justify-content: center;
+         align-items: center;   
+        }
+    </style>
+</head>
+<body>
+
+    <div class="Main">
+        <div class="hello">hello
+
+            <button id="button" >click here</button>
+        </div>  
+        <div class="data1" id="data">
+
+        </div>
+        <!-- <div class="data2" id="data3">
+
+        </div> -->
+
+
+    </div>
+    <script>
+      function printData(){
+       const button =  document.getElementById('button');
+       button.addEventListener('click' , function(){
+        const data = document.getElementById('data');
+        // const content = document.createElement('content');
+
+    // ********MY WAY****
+    const img = new Image(100,200);
+    const paragraph = document.createElement('para')
+    
+    const para = document.createTextNode("This is a paragraph.");
+    img.src = "https://images.unsplash.com/photo-1512633017083-67231aba710d?q=80&w=1733&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+    paragraph.appendChild(para);
+    data.appendChild(img);
+    data.appendChild(paragraph);
+    
+//  ****************************
+    
+    
+    // const paragraph = document.createElement('para')
+    //        const para = document.createTextNode("This is a paragraph.");
+    //        paragraph.appendChild(para);
+        
+    //     const element = document.getElementById("data");
+    //     element.appendChild(paragraph);
+    //     const img = new Image(100,200);
+    //     img.src = "https://images.unsplash.com/photo-1512633017083-67231aba710d?q=80&w=1733&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+    //     img.appendChild("img");
+    //     const img1 = document.getElementById('data');
+    //     img1.appendChild(img);
+
+    // ****ADI****
+    //  content.innerHTML = `
+    //  <div>
+    //     <P> this is a paragraph</p>
+    //         <img 
+    //         style = "height: 100px "
+    //         src="https://images.unsplash.com/photo-1512633017083-67231aba710d?q=80&w=1733&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    //         alt=""
+    //         />
+    //         </div>
+    //         `;
+    //         data.appendChild(content)
+
+        
+
+       })
+
+      }
+      const result = printData();
+      console.log(result);
+    </script>
+</body>
+</html>

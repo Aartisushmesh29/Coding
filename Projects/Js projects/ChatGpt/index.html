@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .dark{
+            background-color: rgb(27, 26, 26);
+            color: #fff;
+        } 
+        .card{
+            background-color: rgb(68, 66, 66);
+            color: white;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .input{
+            margin: 0 auto;
+            margin-top: 30px;
+            height: 200px;
+            width: 80%;
+            display: block;
+        }
+    </style>
+</head>
+<body class="dark">
+    <h1>Get any LEETCODE solution in javascript | chatGPT</h1>
+    <form action="">
+        <label for="message">Enter your code statement: </label>
+        <textarea class="input" id="message" cols="30" rows="10"></textarea>
+        <button type="button" onclick="postData()">Send me</button>
+        <div class="chat-area">test</div>
+    </form>
+    <script>
+        const url = "";
+        const apiKey = 
+        async function postData(){
+            const message = document.getElementById('message').value
+            console.log(message)
+            // fetch(url , {
+            //     method: "POST",
+            //     headers :{
+            //         "content-Type": "application/json",
+            //         "Authorization":`Bearer ${apiKey}`
+            //     },
+            //     body: JSON.stringify(
+            //         {
+            //             "model" : "gpt-3.5-turbo",
+            //             "messages":[
+            //             {
+            //                 "role":"user",
+            //                 "content":`Write a javascript code for this question:
+            //                 ${message}`
+            //             }
+            //             ]
+            //         }
+            //     )      
+            // })
+            fetch(url, {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${apiKey}`
+    },
+    body: JSON.stringify({
+        "model": "gpt-3.5-turbo",
+        "messages": [{
+            "role": "user",
+            "content": `Write a javascript code for this question: ${message}`
+        }]
+    })
+}).then(response => response.json()).then(data => {
+                console.log(data);
+                console.log("DONE");
+                const responseText = data.choices[0].message.content.trim()
+                const card = document.createElement('pre')
+                card.innerHTML = responseText
+                document.getElementById('chat-area').appendChild(card)
+            })
+        } 
+
+    </script>
+</body>
+</html>
